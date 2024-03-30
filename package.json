@@ -1,0 +1,38 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lyttle-Development/Task-Manager.git"
+  },
+  "engines": {
+    "node": "20.11.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lyttle-Development/Task-Manager/issues"
+  },
+  "homepage": "https://github.com/Lyttle-Development/Task-Manager#readme",
+  "workspaces": [
+    "Api",
+    "Dashboard"
+  ],
+  "dependencies": {
+    "@lyttledev/api": "file:Api",
+    "@lyttledev/dashboard": "file:Dashboard"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5"
+  }
+}

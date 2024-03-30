@@ -1,0 +1,26 @@
+{
+  "name": "@lyttledev/content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/main.js",
+  "scripts": {
+    "start": "npm run build && npm run generate:content && npm run generate:format",
+    "build": "tsc",
+    "watch": "nodemon --watch ../content -e ts,md -x \"npm run generate\"",
+    "generate": "npm run generate:content && npm run generate:format",
+    "generate:content": "node dist/src/main.js",
+    "generate:format": "prettier --write \"generated/**/*.ts\""
+  },
+  "engines": {
+    "node": "20.11.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "nodemon": "^3.1.0"
+  }
+}
